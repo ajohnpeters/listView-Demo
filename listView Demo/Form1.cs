@@ -21,14 +21,35 @@ namespace listView_Demo
         {
             // demolistView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
             // demolistView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            // finding my home folder
 
-            homefolderlabel.Text = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile); ;
+            homefolderlabel.Text = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile); 
+            //getting pathname for datafile
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            //add subfolder and path
+            path += @"\fileviewdata\fileviewdata.txt";
+            
+            //verify path in label
+            homefolderlabel.Text = path;
+            //open file you will be doing error checking later
+            System.IO.StreamReader file = new System.IO.StreamReader(path);
             demolistView.View = View.Details;
              demolistView.Width =400;
-            List<string> name = new List<string> { "Joe", "Jill", "aaron","Steven" };
-            List<string> phone = new List<string> { "555-555-5555", "666-666-6666", "777-777-7777","888-888-888" };
-            List<string> email = new List<string> { "Joe@a.com", "Jill@b.com", "aaron@c.com","Steven@d.com" };
-            List<string> program = new List<string> { "Programming", "Networking", "Specialist","astro physisi" };
+            //remove hard coded names
+            List<string> name = new List<string> {} ;
+            List<string> phone = new List<string>{};
+            List<string> email = new List<string> {};
+            List<string> program = new List<string> {};
+            //populate the list
+            do
+            {
+                name.Add(file.ReadLine());
+                phone.Add(file.ReadLine());
+                email.Add(file.ReadLine());
+                program.Add(file.ReadLine());
+            }
+            while (!file.EndOfStream);
+            
             for (int i=0;i<name.Count(); i++)
             {
                 ListViewItem item = new ListViewItem(name[i]);

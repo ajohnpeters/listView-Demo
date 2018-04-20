@@ -98,7 +98,7 @@
             // homefolderlabel
             // 
             this.homefolderlabel.AutoSize = true;
-            this.homefolderlabel.Location = new System.Drawing.Point(621, 194);
+            this.homefolderlabel.Location = new System.Drawing.Point(229, 297);
             this.homefolderlabel.Name = "homefolderlabel";
             this.homefolderlabel.Size = new System.Drawing.Size(67, 13);
             this.homefolderlabel.TabIndex = 6;
