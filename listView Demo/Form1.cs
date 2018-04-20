@@ -19,8 +19,10 @@ namespace listView_Demo
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           // demolistView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
-           // demolistView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            // demolistView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            // demolistView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+
+            homefolderlabel.Text = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile); ;
             demolistView.View = View.Details;
              demolistView.Width =400;
             List<string> name = new List<string> { "Joe", "Jill", "aaron","Steven" };

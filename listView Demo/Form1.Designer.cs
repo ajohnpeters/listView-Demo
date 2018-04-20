@@ -34,6 +34,7 @@
             this.printButton = new System.Windows.Forms.Button();
             this.quitButton = new System.Windows.Forms.Button();
             this.outputLabel = new System.Windows.Forms.Label();
+            this.homefolderlabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // demolistView
@@ -94,11 +95,21 @@
             this.outputLabel.TabIndex = 5;
             this.outputLabel.Text = "Output";
             // 
+            // homefolderlabel
+            // 
+            this.homefolderlabel.AutoSize = true;
+            this.homefolderlabel.Location = new System.Drawing.Point(621, 194);
+            this.homefolderlabel.Name = "homefolderlabel";
+            this.homefolderlabel.Size = new System.Drawing.Size(67, 13);
+            this.homefolderlabel.TabIndex = 6;
+            this.homefolderlabel.Text = "Home Folder";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.homefolderlabel);
             this.Controls.Add(this.outputLabel);
             this.Controls.Add(this.quitButton);
             this.Controls.Add(this.printButton);
@@ -121,6 +132,7 @@
         private System.Windows.Forms.Button printButton;
         private System.Windows.Forms.Button quitButton;
         private System.Windows.Forms.Label outputLabel;
+        private System.Windows.Forms.Label homefolderlabel;
     }
 }
 
