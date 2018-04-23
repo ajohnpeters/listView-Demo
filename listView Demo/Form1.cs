@@ -156,6 +156,25 @@ namespace listView_Demo
                 
             }
         }
+
+        private void quitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
+
+        private void addPersonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            addPersonForm addPersonForm = new addPersonForm();
+            addPersonForm.Show();
+            addPersonForm.FormClosing += AddPersonForm_FormClosing;
+        }
+
+        private void AddPersonForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Show();
+        }
     }
     }
 
